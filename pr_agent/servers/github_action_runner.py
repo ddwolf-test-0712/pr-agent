@@ -61,6 +61,9 @@ async def run_action():
         get_settings().set("OPENAI.ORG", OPENAI_ORG)
     if ANTHROPIC_KEY:
         get_settings().set("ANTHROPIC.KEY", ANTHROPIC_KEY)
+        print("ANTHROPIC_KEY is set")
+    else:
+        print("ANTHROPIC_KEY is not set")
 
     get_settings().set("GITHUB.USER_TOKEN", GITHUB_TOKEN)
     get_settings().set("GITHUB.DEPLOYMENT_TYPE", "user")
