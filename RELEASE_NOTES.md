@@ -1,10 +1,10 @@
 ## [Version 0.11] - 2023-12-07
-- codiumai/pr-agent:0.11
-- codiumai/pr-agent:0.11-github_app
-- codiumai/pr-agent:0.11-bitbucket-app
-- codiumai/pr-agent:0.11-gitlab_webhook
-- codiumai/pr-agent:0.11-github_polling
-- codiumai/pr-agent:0.11-github_action
+- ddwolf-test-0712/pr-agent:0.11
+- ddwolf-test-0712/pr-agent:0.11-github_app
+- ddwolf-test-0712/pr-agent:0.11-bitbucket-app
+- ddwolf-test-0712/pr-agent:0.11-gitlab_webhook
+- ddwolf-test-0712/pr-agent:0.11-github_polling
+- ddwolf-test-0712/pr-agent:0.11-github_action
 
 ### Added::Algo
 - New section in `/describe` tool - [PR changes walkthrough](https://github.com/Codium-ai/pr-agent/pull/509)
@@ -17,12 +17,12 @@
 
 
 ## [Version 0.10] - 2023-11-15
-- codiumai/pr-agent:0.10
-- codiumai/pr-agent:0.10-github_app
-- codiumai/pr-agent:0.10-bitbucket-app
-- codiumai/pr-agent:0.10-gitlab_webhook
-- codiumai/pr-agent:0.10-github_polling
-- codiumai/pr-agent:0.10-github_action
+- ddwolf-test-0712/pr-agent:0.10
+- ddwolf-test-0712/pr-agent:0.10-github_app
+- ddwolf-test-0712/pr-agent:0.10-bitbucket-app
+- ddwolf-test-0712/pr-agent:0.10-gitlab_webhook
+- ddwolf-test-0712/pr-agent:0.10-github_polling
+- ddwolf-test-0712/pr-agent:0.10-github_action
 
 ### Added::Algo
 - Review tool now works with [persistent comments](https://github.com/Codium-ai/pr-agent/pull/451) by default
@@ -39,12 +39,12 @@
 - Bug fixes in GitLab and BitBucket
 
 ## [Version 0.9] - 2023-10-29
-- codiumai/pr-agent:0.9
-- codiumai/pr-agent:0.9-github_app
-- codiumai/pr-agent:0.9-bitbucket-app
-- codiumai/pr-agent:0.9-gitlab_webhook
-- codiumai/pr-agent:0.9-github_polling
-- codiumai/pr-agent:0.9-github_action
+- ddwolf-test-0712/pr-agent:0.9
+- ddwolf-test-0712/pr-agent:0.9-github_app
+- ddwolf-test-0712/pr-agent:0.9-bitbucket-app
+- ddwolf-test-0712/pr-agent:0.9-gitlab_webhook
+- ddwolf-test-0712/pr-agent:0.9-github_polling
+- ddwolf-test-0712/pr-agent:0.9-github_action
 
 ### Added::Algo
 - New tool - [generate_labels](https://github.com/Codium-ai/pr-agent/blob/main/docs/GENERATE_CUSTOM_LABELS.md)
@@ -64,12 +64,12 @@ Significant documentation updates (see [Installation Guide](https://github.com/C
 - Added blacklist for specific file extensions in `add_docs` tool (see [link](https://github.com/Codium-ai/pr-agent/pull/385/))
 
 ## [Version 0.8] - 2023-09-27
-- codiumai/pr-agent:0.8
-- codiumai/pr-agent:0.8-github_app
-- codiumai/pr-agent:0.8-bitbucket-app
-- codiumai/pr-agent:0.8-gitlab_webhook
-- codiumai/pr-agent:0.8-github_polling
-- codiumai/pr-agent:0.8-github_action
+- ddwolf-test-0712/pr-agent:0.8
+- ddwolf-test-0712/pr-agent:0.8-github_app
+- ddwolf-test-0712/pr-agent:0.8-bitbucket-app
+- ddwolf-test-0712/pr-agent:0.8-gitlab_webhook
+- ddwolf-test-0712/pr-agent:0.8-github_polling
+- ddwolf-test-0712/pr-agent:0.8-github_action
 
 ### Added::Algo
 - GitHub Action: Can control which tools will run automatically when a new PR is created. (see usage guide: https://github.com/Codium-ai/pr-agent/blob/main/Usage.md#working-with-github-action)
@@ -82,12 +82,12 @@ Significant documentation updates (see [Installation Guide](https://github.com/C
 ## [Version 0.7] - 2023-09-20
 
 ### Docker Tags
-- codiumai/pr-agent:0.7
-- codiumai/pr-agent:0.7-github_app
-- codiumai/pr-agent:0.7-bitbucket-app
-- codiumai/pr-agent:0.7-gitlab_webhook
-- codiumai/pr-agent:0.7-github_polling
-- codiumai/pr-agent:0.7-github_action
+- ddwolf-test-0712/pr-agent:0.7
+- ddwolf-test-0712/pr-agent:0.7-github_app
+- ddwolf-test-0712/pr-agent:0.7-bitbucket-app
+- ddwolf-test-0712/pr-agent:0.7-gitlab_webhook
+- ddwolf-test-0712/pr-agent:0.7-github_polling
+- ddwolf-test-0712/pr-agent:0.7-github_action
  
 ### Added::Algo
 - New tool /similar_issue - Currently on GitHub app and CLI: indexes the issues in the repo, find the most similar issues to the target issue.

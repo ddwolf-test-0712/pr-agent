@@ -43,22 +43,22 @@ To invoke a tool (for example `review`), you can run directly from the Docker im
 
 - For GitHub:
 ```
-docker run --rm -it -e OPENAI.KEY=<your key> -e GITHUB.USER_TOKEN=<your token> codiumai/pr-agent:latest --pr_url <pr_url> review
+docker run --rm -it -e OPENAI.KEY=<your key> -e GITHUB.USER_TOKEN=<your token> ddwolf-test-0712/pr-agent:latest --pr_url <pr_url> review
 ```
 
 - For GitLab:
 ```
-docker run --rm -it -e OPENAI.KEY=<your key> -e CONFIG.GIT_PROVIDER=gitlab -e GITLAB.PERSONAL_ACCESS_TOKEN=<your token> codiumai/pr-agent:latest --pr_url <pr_url> review
+docker run --rm -it -e OPENAI.KEY=<your key> -e CONFIG.GIT_PROVIDER=gitlab -e GITLAB.PERSONAL_ACCESS_TOKEN=<your token> ddwolf-test-0712/pr-agent:latest --pr_url <pr_url> review
 ```
 
 Note: If you have a dedicated GitLab instance, you need to specify the custom url as variable:
 ```
-docker run --rm -it -e OPENAI.KEY=<your key> -e CONFIG.GIT_PROVIDER=gitlab -e GITLAB.PERSONAL_ACCESS_TOKEN=<your token> -e GITLAB.URL=<your gitlab instance url> codiumai/pr-agent:latest --pr_url <pr_url> review
+docker run --rm -it -e OPENAI.KEY=<your key> -e CONFIG.GIT_PROVIDER=gitlab -e GITLAB.PERSONAL_ACCESS_TOKEN=<your token> -e GITLAB.URL=<your gitlab instance url> ddwolf-test-0712/pr-agent:latest --pr_url <pr_url> review
 ```
 
 - For BitBucket:
 ```
-docker run --rm -it -e CONFIG.GIT_PROVIDER=bitbucket -e OPENAI.KEY=$OPENAI_API_KEY -e BITBUCKET.BEARER_TOKEN=$BITBUCKET_BEARER_TOKEN codiumai/pr-agent:latest --pr_url=<pr_url> review
+docker run --rm -it -e CONFIG.GIT_PROVIDER=bitbucket -e OPENAI.KEY=$OPENAI_API_KEY -e BITBUCKET.BEARER_TOKEN=$BITBUCKET_BEARER_TOKEN ddwolf-test-0712/pr-agent:latest --pr_url=<pr_url> review
 ```
 
 For other git providers, update CONFIG.GIT_PROVIDER accordingly, and check the `pr_agent/settings/.secrets_template.toml` file for the environment variables expected names and values.
@@ -68,12 +68,12 @@ For other git providers, update CONFIG.GIT_PROVIDER accordingly, and check the `
 
 If you want to ensure you're running a specific version of the Docker image, consider using the image's digest:
 ```bash
-docker run --rm -it -e OPENAI.KEY=<your key> -e GITHUB.USER_TOKEN=<your token> codiumai/pr-agent@sha256:71b5ee15df59c745d352d84752d01561ba64b6d51327f97d46152f0c58a5f678 --pr_url <pr_url> review
+docker run --rm -it -e OPENAI.KEY=<your key> -e GITHUB.USER_TOKEN=<your token> ddwolf-test-0712/pr-agent@sha256:71b5ee15df59c745d352d84752d01561ba64b6d51327f97d46152f0c58a5f678 --pr_url <pr_url> review
 ```
 
 Or you can run a [specific released versions](https://github.com/Codium-ai/pr-agent/blob/main/RELEASE_NOTES.md) of pr-agent, for example:
 ```
-codiumai/pr-agent@v0.9
+ddwolf-test-0712/pr-agent@v0.9
 ```
 
 ---

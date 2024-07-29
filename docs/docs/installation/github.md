@@ -34,7 +34,7 @@ if you want to pin your action to a specific release (v0.23 for example) for sta
     steps:
       - name: PR Agent action step
         id: pragent
-        uses: docker://codiumai/pr-agent:0.23-github_action
+        uses: docker://ddwolf-test-0712/pr-agent:0.23-github_action
 ...
 ```
 
@@ -44,7 +44,7 @@ For enhanced security, you can also specify the Docker image by its digest:
     steps:
       - name: PR Agent action step
         id: pragent
-        uses: docker://codiumai/pr-agent@sha256:14165e525678ace7d9b51cda8652c2d74abb4e1d76b57c4a6ccaeba84663cc64
+        uses: docker://ddwolf-test-0712/pr-agent@sha256:14165e525678ace7d9b51cda8652c2d74abb4e1d76b57c4a6ccaeba84663cc64
 ...
 ```
 
@@ -140,8 +140,8 @@ cp pr_agent/settings/.secrets_template.toml pr_agent/settings/.secrets.toml
 6) Build a Docker image for the app and optionally push it to a Docker repository. We'll use Dockerhub as an example:
 
     ```
-    docker build . -t codiumai/pr-agent:github_app --target github_app -f docker/Dockerfile
-    docker push codiumai/pr-agent:github_app  # Push to your Docker repository
+    docker build . -t ddwolf-test-0712/pr-agent:github_app --target github_app -f docker/Dockerfile
+    docker push ddwolf-test-0712/pr-agent:github_app  # Push to your Docker repository
     ```
 
 7. Host the app using a server, serverless function, or container environment. Alternatively, for development and
@@ -168,12 +168,12 @@ For example: `GITHUB.WEBHOOK_SECRET` --> `GITHUB__WEBHOOK_SECRET`
 1. Follow steps 1-5 from [here](#run-as-a-github-app).
 2. Build a docker image that can be used as a lambda function
     ```shell
-    docker buildx build --platform=linux/amd64 . -t codiumai/pr-agent:serverless -f docker/Dockerfile.lambda
+    docker buildx build --platform=linux/amd64 . -t ddwolf-test-0712/pr-agent:serverless -f docker/Dockerfile.lambda
    ```
 3. Push image to ECR
     ```shell
-	docker tag codiumai/pr-agent:serverless <AWS_ACCOUNT>.dkr.ecr.<AWS_REGION>.amazonaws.com/codiumai/pr-agent:serverless
-	docker push <AWS_ACCOUNT>.dkr.ecr.<AWS_REGION>.amazonaws.com/codiumai/pr-agent:serverless
+	docker tag ddwolf-test-0712/pr-agent:serverless <AWS_ACCOUNT>.dkr.ecr.<AWS_REGION>.amazonaws.com/ddwolf-test-0712/pr-agent:serverless
+	docker push <AWS_ACCOUNT>.dkr.ecr.<AWS_REGION>.amazonaws.com/ddwolf-test-0712/pr-agent:serverless
     ```
 4. Create a lambda function that uses the uploaded image. Set the lambda timeout to be at least 3m.
 5. Configure the lambda function to have a Function URL.

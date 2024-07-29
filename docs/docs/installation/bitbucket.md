@@ -15,7 +15,7 @@ pipelines:
             services:
               - docker
             script:
-              - docker run -e CONFIG.GIT_PROVIDER=bitbucket -e OPENAI.KEY=$OPENAI_API_KEY -e BITBUCKET.BEARER_TOKEN=$BITBUCKET_BEARER_TOKEN codiumai/pr-agent:latest --pr_url=https://bitbucket.org/$BITBUCKET_WORKSPACE/$BITBUCKET_REPO_SLUG/pull-requests/$BITBUCKET_PR_ID review
+              - docker run -e CONFIG.GIT_PROVIDER=bitbucket -e OPENAI.KEY=$OPENAI_API_KEY -e BITBUCKET.BEARER_TOKEN=$BITBUCKET_BEARER_TOKEN ddwolf-test-0712/pr-agent:latest --pr_url=https://bitbucket.org/$BITBUCKET_WORKSPACE/$BITBUCKET_REPO_SLUG/pull-requests/$BITBUCKET_PR_ID review
 ```
 
 2. Add the following secure variables to your repository under Repository settings > Pipelines > Repository variables.
@@ -60,8 +60,8 @@ python cli.py --pr_url https://git.onpreminstanceofbitbucket.com/projects/PROJEC
 
 To run pr-agent as webhook, build the docker image:
 ```
-docker build . -t codiumai/pr-agent:bitbucket_server_webhook --target bitbucket_server_webhook -f docker/Dockerfile
-docker push codiumai/pr-agent:bitbucket_server_webhook  # Push to your Docker repository
+docker build . -t ddwolf-test-0712/pr-agent:bitbucket_server_webhook --target bitbucket_server_webhook -f docker/Dockerfile
+docker push ddwolf-test-0712/pr-agent:bitbucket_server_webhook  # Push to your Docker repository
 ```
 
 Navigate to `Projects` or `Repositories`, `Settings`, `Webhooks`, `Create Webhook`.
